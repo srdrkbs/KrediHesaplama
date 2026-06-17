@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "mobile:build": "powershell -ExecutionPolicy Bypass -File ../scripts/build-mobile.ps1",
+    "mobile:open": "npx cap open android"
   },
   "private": true,
   "packageManager": "npm@11.15.0",

@@ -32,8 +32,8 @@ export interface LoanCalculationResponse {
   providedIn: 'root'
 })
 export class LoanService {
-  // Mobil cihazda/emülatörde test ederken localhost yerine bilgisayarınızın IP adresini veya emülatör için 10.0.2.2 kullanmalısınız.
-  private apiUrl = 'http://localhost:5197/api/loan/calculate'; 
+  // Canlı ortam Render API URL'i
+  private apiUrl = 'https://kredi-hesaplama-api.onrender.com/api/loan/calculate'; 
 
   constructor(private http: HttpClient) { }
 
