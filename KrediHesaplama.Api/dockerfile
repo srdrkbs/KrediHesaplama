@@ -3,10 +3,7 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0-alpine AS build
 WORKDIR /src
 
 COPY . .
-COPY . .
 
-RUN dotnet restore "KrediHesaplama.Api.csproj"
-RUN dotnet publish "KrediHesaplama.Api.csproj" -c Release -o /app
 RUN dotnet restore "KrediHesaplama.Api.csproj"
 RUN dotnet publish "KrediHesaplama.Api.csproj" -c Release -o /app
 
