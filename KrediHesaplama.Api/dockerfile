@@ -1,11 +1,11 @@
 FROM ://microsoft.com AS build
 WORKDIR /src
 
-# Klasördeki her şeyi kopyala
-COPY . . 
+# Render artık doğrudan bu klasörde olduğu için her şeyi içeri kopyalıyoruz
+COPY . .
 
-RUN dotnet restore
-RUN dotnet publish -c Release -o /app
+RUN dotnet restore "KrediHesaplama.Api.csproj"
+RUN dotnet publish "KrediHesaplama.Api.csproj" -c Release -o /app
 
 FROM ://microsoft.com AS final
 WORKDIR /app
