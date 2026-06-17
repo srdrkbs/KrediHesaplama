@@ -1,4 +1,5 @@
 using KrediHesaplama.Api.Features.Loans.CalculateLoan;
+using KrediHesaplama.Api.Infrastructure;
 
 namespace KrediHesaplama.Api.Extensions;
 
@@ -6,6 +7,9 @@ public static class ServiceExtensions
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
+        services.AddExceptionHandler<GlobalExceptionHandler>();
+        services.AddProblemDetails();
+
         services.AddCors(options =>
         {
             options.AddPolicy("AllowAngular",
