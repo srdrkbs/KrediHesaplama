@@ -1,13 +1,12 @@
-FROM ://microsoft.com AS build
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
-# Render artık doğrudan bu klasörde olduğu için her şeyi içeri kopyalıyoruz
 COPY . .
 
 RUN dotnet restore "KrediHesaplama.Api.csproj"
 RUN dotnet publish "KrediHesaplama.Api.csproj" -c Release -o /app
 
-FROM ://microsoft.com AS final
+FROM mcr.microsoft.com AS final
 WORKDIR /app
 COPY --from=build /app .
 ENV ASPNETCORE_URLS=http://+:8080
