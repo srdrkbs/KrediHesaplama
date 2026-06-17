@@ -1,0 +1,44 @@
+# .NET
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+# Node / Angular
+node_modules/
+.angular/
+dist/
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Capacitor / Mobile
+kredi-hesaplama-ui/android/.gradle/
+kredi-hesaplama-ui/android/build/
+kredi-hesaplama-ui/android/app/build/
+kredi-hesaplama-ui/android/local.properties
+kredi-hesaplama-ui/android/captures/
+kredi-hesaplama-ui/android/*.iml
+kredi-hesaplama-ui/android/.idea/
+kredi-hesaplama-ui/android/app/*.iml
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.bak
+*.tmp
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+! .env.example
+appsettings.Development.json

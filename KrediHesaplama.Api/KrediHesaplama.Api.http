@@ -1,0 +1,19 @@
+@KrediHesaplama.Api_HostAddress = http://localhost:5197
+
+GET {{KrediHesaplama.Api_HostAddress}}/api/test/
+Accept: application/json
+
+###
+POST {{KrediHesaplama.Api_HostAddress}}/api/loan/calculate
+Accept: application/json
+Content-Type: application/json
+
+{
+  amount: 1000,
+  termInMonths: 3,
+  monthlyInterestRate: 0.62,
+  bsmvRate: 0.15,
+  kkdfRate: 0.15
+}
+###
+
