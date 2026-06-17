@@ -11,8 +11,8 @@ Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$currentDir\K
 
 # UI'yi npm start ile başlat (Yeni bir pencerede)
 Write-Host "UI baslatiliyor (npm start)..." -ForegroundColor Cyan
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$currentDir\kredi-hesaplama-ui'; npm start"
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$currentDir\kredi-hesaplama-ui'; npm start -o"
 
 Write-Host "Her iki uygulama da ayri pencerelerde baslatildi." -ForegroundColor Yellow
-Write-Host "API: https://localhost:7177"
+Write-Host "API: https://localhost:5197"
 Write-Host "UI: http://localhost:5200"
