@@ -1,7 +1,7 @@
 FROM ://microsoft.com AS build
 WORKDIR /src
 
-# api klasöründeki her şeyi Docker içine kopyalar
+# Klasördeki her şeyi kopyala
 COPY . . 
 
 RUN dotnet restore
