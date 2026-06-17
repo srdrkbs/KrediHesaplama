@@ -1,0 +1,15 @@
+FROM ://microsoft.com AS build
+WORKDIR /src
+
+# Sadece api klasöründeki dosyaları kopyala
+COPY api/ . 
+
+RUN dotnet restore
+RUN dotnet publish -c Release -o /app
+
+FROM ://microsoft.com AS final
+WORKDIR /app
+COPY --from=build /app .
+ENV ASPNETCORE_URLS=http://+:8080
+EXPOSE 8080
+ENTRYPOINT ["dotnet", "KrediHesaplama.Api.dll"]
