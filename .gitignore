@@ -1,30 +1,35 @@
 # .NET
-[Bb]in/
-[Oo]bj/
+**/[Bb]in/
+**/[Oo]bj/
 *.user
 *.userosscache
 *.sln.docstates
 .vs/
+[Dd]ebug/
+[Rr]elease/
 
 # Node / Angular
 node_modules/
 .angular/
 dist/
+out-tsc/
 .npm/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# Capacitor / Mobile
+# Capacitor / Android
 kredi-hesaplama-ui/android/.gradle/
 kredi-hesaplama-ui/android/build/
 kredi-hesaplama-ui/android/app/build/
 kredi-hesaplama-ui/android/local.properties
 kredi-hesaplama-ui/android/captures/
-kredi-hesaplama-ui/android/*.iml
 kredi-hesaplama-ui/android/.idea/
-kredi-hesaplama-ui/android/app/*.iml
+kredi-hesaplama-ui/android/app/.idea/
+kredi-hesaplama-ui/android/**/*.iml
+kredi-hesaplama-ui/android/app/src/main/assets/public/
+kredi-hesaplama-ui/android/app/src/main/assets/capacitor.config.json
 
 # IDEs
 .vscode/
@@ -32,13 +37,39 @@ kredi-hesaplama-ui/android/app/*.iml
 *.swp
 *.bak
 *.tmp
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
 
 # Operating System
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Secrets
+# Secrets and Credentials
 .env
 .env.*
-! .env.example
+!.env.example
 appsettings.Development.json
+appsettings.Local.json
+*.pfx
+*.pem
+*.key
+*.cer
+*.crt
+secrets.json
+.user
+*.passwd
+*.credentials
+.npmrc
+.yarnrc
+
+# Cloud & Local Configs
+.azure/
+.aws/
+.gcloud/
+.firebase/
+.terraform/
+local.settings.json
+
